@@ -12,9 +12,9 @@ $capsule = new Database;
 $conn = $capsule->addConnection([
     'driver' => 'mysql',
     'host' => _env('DB_HOST', '127.0.0.1'),
-    'database' => _env('DB_NAME', 'plandjwr_wkcelink'),
-    'username' => _env('DB_USER', 'plandjwr_wkcelink'),
-    'password' => _env('DB_PASS', '+}Bh8SLpL3Rl'),
+    'database' => _env('DB_NAME', 'wecodefy'),
+    'username' => _env('DB_USER', 'root'),
+    'password' => _env('DB_PASS', ''),
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
@@ -25,7 +25,6 @@ class DB extends Database
 try {
     $result = DB::schema()->hasTable("test-wecodefy-database");
 } catch (\Illuminate\Database\QueryException $ex) {
-    // define('DB_NAME', '');
     if ($ex->getCode() == 2002) {
         $error = array(
             'Type' => 'Database problem',
@@ -37,7 +36,7 @@ try {
     } elseif ($ex->getCode() == 1049) {
         $error = array(
             'Type' => 'Database problem',
-            'Message' => 'Database  not found, try to correct it in constant file',
+            'Message' => 'Database <b>' . DB_NAME . ' </b> not found, try to correct it in constant file',
             'Dir' => 'app/config',
             'Code' => $ex->getCode(),
         );
@@ -45,7 +44,7 @@ try {
     } elseif ($ex->getCode() == 1044) {
         $error = array(
             'Type' => 'Database problem',
-            'Message' => 'Database user called  not found, try to correct it in constant file',
+            'Message' => 'Database user called <b>' . DB_USER . ' </b> not found, try to correct it in constant file',
             'Dir' => 'app/config',
             'Code' => $ex->getCode(),
         );

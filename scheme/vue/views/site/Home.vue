@@ -119,6 +119,9 @@ export default {
   mounted() {
     let vm = this;
     this.getPerson();
+    if(!this.$route.params.id){
+      window.location.href = "https://workcelerate.learnibleglobal.com/";
+    }
   },
 };
 </script>
