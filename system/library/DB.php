@@ -37,7 +37,7 @@ try {
     } elseif ($ex->getCode() == 1049) {
         $error = array(
             'Type' => 'Database problem',
-            'Message' => 'Database <b>' . DB_NAME . ' </b> not found, try to correct it in constant file',
+            'Message' => 'Database  not found, try to correct it in constant file',
             'Dir' => 'app/config',
             'Code' => $ex->getCode(),
         );
@@ -45,7 +45,7 @@ try {
     } elseif ($ex->getCode() == 1044) {
         $error = array(
             'Type' => 'Database problem',
-            'Message' => 'Database user called <b>' . DB_USER . ' </b> not found, try to correct it in constant file',
+            'Message' => 'Database user called  not found, try to correct it in constant file',
             'Dir' => 'app/config',
             'Code' => $ex->getCode(),
         );
