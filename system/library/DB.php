@@ -12,9 +12,9 @@ $capsule = new Database;
 $conn = $capsule->addConnection([
     'driver' => 'mysql',
     'host' => _env('DB_HOST', '127.0.0.1'),
-    'database' => _env('DB_NAME', 'wecodefy'),
-    'username' => _env('DB_USER', 'root'),
-    'password' => _env('DB_PASS', ''),
+    'database' => _env('DB_NAME', 'plandjwr_wkcelink'),
+    'username' => _env('DB_USER', 'plandjwr_wkcelink'),
+    'password' => _env('DB_PASS', '+}Bh8SLpL3Rl'),
 ]);
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
