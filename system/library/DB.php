@@ -25,6 +25,7 @@ class DB extends Database
 try {
     $result = DB::schema()->hasTable("test-wecodefy-database");
 } catch (\Illuminate\Database\QueryException $ex) {
+    // define('DB_NAME', '');
     if ($ex->getCode() == 2002) {
         $error = array(
             'Type' => 'Database problem',

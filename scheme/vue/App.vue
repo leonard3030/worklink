@@ -4,11 +4,7 @@
     <notifications group="status" position="bottom right" :duration="5000" />
 
     <vue-confirm-dialog></vue-confirm-dialog>
-    <vue-particles
-      color="#dedede"
-    >
-    </vue-particles>
-    <div class="app-loader" v-if="$store.state.main_loader">
+        <div class="app-loader" v-if="$store.state.main_loader">
       <div class="loading-panel">
         <a-spin :spinning="true"></a-spin>
         <span class="text">Loading...</span>
