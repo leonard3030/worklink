@@ -1,0 +1,74 @@
+// If you want to override variables do it here
+@import "variables";
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+// If you want to add something do it here
+@import "custom";
+.card-header:not(.content-center)>.c-icon:first-child {
+    margin-right: 0.1rem;
+    margin-top: 0.1rem;
+    vertical-align: top;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.c-sidebar {
+    background: #0884AF !important;
+}
+
+.bg-site-color {
+    background: #0884AF !important;
+    color: #fff;
+}
+
+.btn-site-color {
+    background: #0884AF !important;
+    color: #fff;
+}
+
+.btn-site_g_clor {
+    background: #1BA5A4 !important;
+    color: #fff;
+}
+
+.btn-site_grey_color {
+    background: #6E6E6E !important;
+    color: #fff;
+}
+
+.btn-site_danger {
+    background: #000000 !important;
+    color: #fff;
+}
+
+.modal-footer-options {
+    display: flex;
+    .btn {
+        margin-left: 20px;
+    }
+}
+
+.email-table {
+    border: 1px solid #ccc;
+    width: 100%;
+    td,
+    th {
+        border: 1px solid #ddd;
+    }
+    .td-msg {
+        padding: 10px;
+        width: 100%;
+        .msg-textarea {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 103px;
+        }
+    }
+    .email-status {
+        &.active {
+            color: #1BA5A4;
+        }
+    }
+}
