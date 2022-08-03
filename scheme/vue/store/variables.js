@@ -1,6 +1,6 @@
 let api_base_url = "";
 if (process.env.NODE_ENV === "production") {
-  api_base_url = "https://www.vugafrica.rw/api/v1";
+  api_base_url = "http://wcke.planbpreneur.com/api/v1";
 } else {
   api_base_url = "http://127.0.0.1:8000/api/v1";
 }
@@ -8,7 +8,7 @@ export const API_BASE_URL = api_base_url;
 
 let admin_api_base_url = "";
 if (process.env.NODE_ENV === "production") {
-  admin_api_base_url = "https://www.vugafrica.rw/api/v1/admin";
+  admin_api_base_url = "http://wcke.planbpreneur.com/api/v1/admin";
 } else {
   admin_api_base_url = "http://127.0.0.1:8000/api/v1/admin";
 }
@@ -16,13 +16,13 @@ export const ADMIN_API_BASE_URL = admin_api_base_url;
 
 let base_url = "";
 if (process.env.NODE_ENV === "production") {
-  base_url = "https://www.vugafrica.rw/api/v1";
+  base_url = "http://wcke.planbpreneur.com/api/v1";
 } else {
   base_url = "http://127.0.0.1:8080/api/v1";
 }
 let upload_base_url = "";
 if (process.env.NODE_ENV === "production") {
-  upload_base_url = "https://www.vugafrica.rw/";
+  upload_base_url = "http://wcke.planbpreneur.com/";
 } else {
   upload_base_url = "http://127.0.0.1:8000/";
 }
